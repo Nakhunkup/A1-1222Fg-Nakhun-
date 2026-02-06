@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Science Exam Generator AI</title>
+    <!-- เรียกฟร้อนตรงนี้นะอิอิ -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Prompt:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link id="theme-link" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--main page ตัวอักษรใหญ่ๆ-->
+    <section id="landing-page">
+        <div class="content-box">
+            <h1>Science Exam <span class="highlight">Generator AI</span></h1>
+            <p class="subtitle">สร้างข้อสอบวิทยาศาสตร์ด้วย AI ฟิสิกส์ เคมี ชีววิทยา โลก ดาราศาสตร์และอวกาศ
+                ปรับระดับความยากได้ </p>
+            <div class="container">
+                <button id="theme-btn">switch team</button>
+            </div>
+
+            <!-- <img src="img/chinchang02.png" alt="chinchang" class="chinchang-image">
+            <img src="img/chinchang02.png" alt="chinchang" class="chinchang-image">
+            <img src="img/chinchang02.png" alt="chinchang" class="chinchang-image"> -->
+            <div class="instruction-cards">
+                <div class="card">
+                    <span class="step-icon">�</span>
+                    <h3>เลือกวิชา</h3>
+                    <p>เลือกวิชาวิทยาศาสตร์ที่ต้องการสร้างข้อสอบ</p>
+                </div>
+                <div class="card">
+                    <span class="step-icon">⚙️</span>
+                    <h3>ตั้งค่า</h3>
+                    <p>กำหนดระดับความยากและจำนวนข้อสอบ</p>
+                </div>
+                <div class="card">
+                    <span class="step-icon">✨</span>
+                    <h3>สร้างข้อสอบ</h3>
+                    <p>AI จะสร้างข้อสอบพร้อมเฉลยให้คุณทันที</p>
+                </div>
+            </div>
+
+            <!-- ปุ่มเปิดหน้า chat แบบเวอร์ๆ แบร่ๆๆ -->
+            <button id="cta-btn">Generate Exam Now �</button>
+            <a href="https://www.meta.ai/media" class="link-hailou" id="hailou"><button id="hailou-button">make
+                    video</button></a>
+    </section>
+    </div>
+    <!-- /////////////////////////// -->
+    <!-- ไอคอนแชทมุมขวาล่าง -->
+    <div id="LUCAS-by-T-Ying-icon"></div>
+    <!-- /////////////////////////// -->
+
+    <!-- แชทไว้คุยยกับน้อง lucas -->
+    <div id="LUCAS-container" class="hidden">
+        <div id="LUCAS-header">
+            <span>Science Exam Generator</span>
+            <button id="close-btn" aria-label="Close Panel">&times;</button>
+        </div>
+
+        <div id="LUCAS-body">
+            <div id="LUCAS-messages">
+                <!-- ข้อความต้อนรับ -->
+                <div class="message bot">
+                    🔬 Welcome! Configure your science exam below and click "Generate Exam" to create a custom test with
+                    AI. 📝
+                </div>
+
+                <!-- Exam Configuration Panel -->
+                <div id="exam-config">
+                    <div class="config-group">
+                        <label for="subject-select">📚 Subject:</label>
+                        <select id="subject-select">
+                            <option value="physics">ฟิสิกส์ (Physics)</option>
+                            <option value="chemistry">เคมี (Chemistry)</option>
+                            <option value="biology">ชีววิทยา (Biology)</option>
+                            <option value="earth-science">โลก ดาราศาสตร์และอวกาศ (Earth & Space Science)</option>
+                        </select>
+                    </div>
+
+                    <div class="config-group">
+                        <label for="difficulty-select">⚙️ Difficulty:</label>
+                        <select id="difficulty-select">
+                            <option value="easy">ง่าย (Easy)</option>
+                            <option value="medium">ปานกลาง (Medium)</option>
+                            <option value="hard">ยาก (Hard)</option>
+                        </select>
+                    </div>
+
+                    <div class="config-group">
+                        <label for="question-count">📊 Number of Questions:</label>
+                        <select id="question-count">
+                            <option value="5">5 ข้อ</option>
+                            <option value="10" selected>10 ข้อ</option>
+                            <option value="15">15 ข้อ</option>
+                            <option value="20">20 ข้อ</option>
+                        </select>
+                    </div>
+
+                    <button id="generate-exam-btn">Generate Exam ✨</button>
+                </div>
+
+                <!-- Exam Display Area -->
+                <div id="exam-display"></div>
+            </div>
+        </div>
+
+        <div id="LUCAS-input-container" style="display: none;">
+            <input type="text" id="chatbot-input" placeholder="Type a sentence to check..." />
+            <button id="send-btn">Check</button>
+        </div>
+
+        <!-- Answer Key Toggle Button -->
+        <div id="answer-toggle-container" style="display: none;">
+            <button id="toggle-answer-btn">Show Answer Key 🔑</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!-- style แบบลวกๆ -->
+<style>
+    .chinchang-image {
+        width: 200px;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    #theme-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: #6200ea;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+
+    #hailou-button {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px 15px;
+        background-color: #03dac6;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        transition: background-color 0.3s ease;
+    }
+</style>
+<!-- หัวตัว h1 -->
+<style>
+    h1 {
+        font-size: 3rem;
+        font-family: Arial, sans-serif;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 900;
+        position: relative;
+    }
+</style>

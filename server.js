@@ -79,5 +79,3 @@ if (require.main === module) {
 
 // Export the app for Vercel
 module.exports = app;
-// Export the app for Vercel
-module.exports = app;

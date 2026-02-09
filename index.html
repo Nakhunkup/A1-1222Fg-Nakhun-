@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarePlus AI | The Future of Healthcare</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-panel">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-brain"></i>
+                MindCare<span>Therapy</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active" data-i18n="nav-home">Home</a></li>
+                <li><a href="chatbot.html" class="nav-link" data-i18n="nav-therapist">Therapist AI</a></li>
+                <li><a href="services.html" class="nav-link" data-i18n="nav-services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <button class="lang-btn" id="lang-toggle">TH</button>
+            <a href="chatbot.html" class="btn btn-primary">
+                <span data-i18n="btn-chat">Chat Now</span> <i class="fa-regular fa-comments"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 data-i18n="hero-title">Compassionate Mental Health Care<br>Powered by Understanding</h1>
+                <p data-i18n="hero-desc">Experience professional psychotherapy with MindCare. Our experienced therapists
+                    provide personalized care for your mental wellness, while our AI assistant helps you get started on
+                    your healing journey.</p>
+                <div class="hero-actions">
+                    <a href="chatbot.html" class="btn btn-primary">
+                        <i class="fa-solid fa-comments"></i> <span data-i18n="hero-cta-therapist">Talk to Therapist
+                            AI</span>
+                    </a>
+                    <a href="services.html" class="btn btn-glass">
+                        <span data-i18n="hero-cta-services">View Services</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="ai-avatar-container">
+                    <div class="pulse-ring"></div>
+                    <div class="pulse-ring"></div>
+                    <div class="ai-circle-inner">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                </div>
+
+                <!-- Floating Chat Preview -->
+                <div class="chat-widget-preview glass-card">
+                    <div class="chat-bubble ai">
+                        <span data-i18n="chat-preview-1">Hello! I'm here to listen. 💜</span>
+                    </div>
+                    <div class="chat-bubble ai">
+                        <span data-i18n="chat-preview-2">How are you feeling today?</span>
+                    </div>
+                    <div class="input-wrapper" style="margin-top: 15px; padding: 5px 10px;">
+                        <span style="font-size: 0.8rem; color: #aaa;" data-i18n="chat-placeholder">Type a
+                            message...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container" style="padding: 80px 24px;">
+        <div class="grid-container">
+            <div class="glass-card service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <h3 data-i18n="feature-individual-title">Individual Therapy</h3>
+                <p data-i18n="feature-individual-desc">One-on-one sessions tailored to your unique needs and goals for
+                    personal growth and healing.</p>
+            </div>
+            <div class="glass-card service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <h3 data-i18n="feature-couples-title">Couples Therapy</h3>
+                <p data-i18n="feature-couples-desc">Strengthen your relationship through guided communication and
+                    understanding with your partner.</p>
+            </div>
+            <div class="glass-card service-card">
+                <div class="service-icon">
+                    <i class="fa-solid fa-people-group"></i>
+                </div>
+                <h3 data-i18n="feature-family-title">Family Therapy</h3>
+                <p data-i18n="feature-family-desc">Build healthier family dynamics and resolve conflicts in a
+                    supportive, safe environment.</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Therapist AI | MindCare Therapy</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-panel">
+        <div class="nav-content">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-brain"></i>
+                MindCare<span>Therapy</span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link" data-i18n="nav-home">Home</a></li>
+                <li><a href="chatbot.html" class="nav-link active" data-i18n="nav-therapist">Therapist AI</a></li>
+                <li><a href="services.html" class="nav-link" data-i18n="nav-services">Services</a></li>
+                <li><a href="contact.html" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+            </ul>
+            <button class="lang-btn" id="lang-toggle">TH</button>
+            <a href="chatbot.html" class="btn btn-primary">
+                <span data-i18n="btn-chat">Chat Now</span> <i class="fa-regular fa-comments"></i>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Chat Interface -->
+    <section class="chat-page container">
+        <div class="chat-container glass-panel">
+            <div class="chat-header">
+                <div class="ai-status"></div>
+                <div>
+                    <h3 data-i18n="chat-header-title">MindCare Therapist AI</h3>
+                    <span style="font-size: 0.85rem; color: var(--text-muted);"><span
+                            data-i18n="chat-header-status">Always here to listen</span> • <span style="color: #2ecc71;"
+                            data-i18n="chat-header-online">Online</span></span>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will be added here by JS -->
+                <div class="message ai">
+                    <div class="message-avatar">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="message-content" data-i18n="chat-welcome">
+                        Hello! I'm the MindCare Therapist AI. I'm here to listen and support you. I can help you explore
+                        your feelings, provide coping strategies, or guide you to book an appointment with one of our
+                        therapists. How are you feeling today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <div class="input-wrapper">
+                    <input type="text" id="user-input" class="chat-input" placeholder="Type your message here..."
+                        autocomplete="off" data-i18n-placeholder="chat-input-placeholder">
+                    <button id="send-btn" class="send-btn">
+                        <i class="fa-paper-plane fa-solid"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
